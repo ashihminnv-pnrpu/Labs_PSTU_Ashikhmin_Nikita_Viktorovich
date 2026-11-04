@@ -1,18 +1,34 @@
 #include <iterator>
+#include <iostream>
 using namespace std;
 
 int main()
 {
-    int arr[] = {3, 5, 4, 7, 10, 4};
-    int sorted[size(arr)] = {arr[0]};
-    bool F;
+    int arr[] = {3, 5, 4, 7, 9, 4};
+    int n = size(arr);
 
-    for(int i = 1; i < size(arr); i++)
+    for(int i = 1; i < n; ++i)
     {
-        F = false;
-        for(int j = 0; (not F) and (j < size(arr)); j++)
+        int y = arr[i];
+        int j = i - 1;
+
+        while(j >= 0 and arr[j] > y)
         {
-            
+            arr[j + 1] = arr[j];
+            --j;
         }
+
+        arr[j + 1] = y;
     }
+    for(int x : arr)
+    {
+        cout << x;
+    }
+    cout << '\n';
 }
+
+Дома самостоятельно изучить, написать и нарисовать блок схемы
+Сортировка Шелла
+Многофазная сортировка
+
+Всё загрузить на гит
