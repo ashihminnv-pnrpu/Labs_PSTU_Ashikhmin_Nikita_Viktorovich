@@ -3,13 +3,13 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {5, 3, 2, 7, 1, 6, 7};
+    int arr[] = {5, 3, 2, 7, 1, 6, 3};
     int n = size(arr);
     int y;
-    for(int i = 0; i < n; ++i)
+    for(int i = 0; i < n - 1; ++i)
     {
-        int min = 2147483647;
-        int min_index = 0;
+        int min = arr[i];
+        int min_index = i;
         for(int j = i; j < n; ++j)
         {
             if (arr[j] < min)
